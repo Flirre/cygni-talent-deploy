@@ -34,9 +34,13 @@ jobs:
       - name: install ci-dependencies
         run: npm ci
 
-      # Installs dependencies needed to test this application
+      # Makes sure that we follow some dang standards around here
       - name: lint all the code
         run: npm run lint
+
+      # Ensures that the code is A E S T H E T I C
+      - name: format all of the code
+        run: npm run format
 
       # Runs a single command using the runners shell
       - name: test application
