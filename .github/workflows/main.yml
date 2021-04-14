@@ -56,10 +56,10 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
 
-        - name: Deploy
-          run: |
-            ./scripts/deploy.sh
-          shell: bash
-          env:
-              SERVER: "<SERVER-IP>"
-              DEPLOY_USER: "github"
+      - name: Deploy
+        run: |
+          ./scripts/deploy.sh
+        shell: bash
+        env:
+          SERVER: "<SERVER-IP>"
+          DEPLOY_USER: "github"
